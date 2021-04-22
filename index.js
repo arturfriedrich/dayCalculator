@@ -32,7 +32,7 @@ document.getElementById("submitBtn").addEventListener("click", function() {
 
 function showResult() {
     formContainer.style.display = "none"
-    resultContainer.style.display = "block"
+    resultContainer.style.display = "flex"
     
     var resultDisplay = document.querySelector(".result")
     var resultScore = GetDays()
@@ -40,3 +40,8 @@ function showResult() {
     resultDisplay.innerHTML = resultScore
     
 }
+
+document.getElementById("backBtn").addEventListener("click", function() {
+    formContainer.style.display = "flex"
+    resultContainer.style.display = "none"
+})
