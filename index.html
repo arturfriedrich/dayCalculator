@@ -4,12 +4,17 @@
         <link rel="stylesheet" href="./index.css">
     </head>
     <body>
-        <div class="container">
+        <div class="container form-container">
             <h1>How many days old are you?</h1>
-            <label for="dob">DOB:</label>
+            <label for="dob">Your birthday:</label>
             <input id="dateInput" type="date" required>
-            <button id="submitBtn">Go</button>
-          </div>  
-        <script src="./index.js"></script>
+            <p class="error-message">Please pick your birthday!</p>
+            <button type="submit" id="submitBtn">Go</button>
+        </div>
+        <div class="container result-container">
+            <h1>You are <br><span id="result", class="result"></span><br> days old!</h1>
+            <button type="submit" id="backBtn">Back</button>
+        </div> 
+    <script src="./index.js"></script>
     </body>
 </html>
