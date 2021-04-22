@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;800&display=swap');
 
+:root {
+    --off-white: #f2f2f2;
+    --black: #333F48;
+    --yellow: #FBDB65;
+    --orange: #FF8A3D;
+    --purple: #6068B2;
+    --red: #DA291C;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -18,12 +27,13 @@ html, body, .container {
 
 body {
     min-height: 100vh;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     
-    background-color: #FBDB65;
-    color: #4C4084;
+    background-color: var(--yellow);
+    color: var(--off-white);
     letter-spacing: 1px;
 }
 
@@ -31,27 +41,40 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  align-items: center;
   text-align: center;
   justify-content: center;
+  align-items: center;
+  
+  background-color: var(--orange);
+  margin: 3em;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 5px #8888;
+  
+  transform: scale(1);
+  transition: 500ms;
+}
+
+.container:hover {
+    transform: scale(1.05);
 }
 
 .result-container {
     display: none;
+    padding: 4em;
 }
 
 .error-message {
     display: none;
+    font-weight: 800;
     margin: 0;
-    color: #CD001A;
+    color: var(--red);
 }
 
 button,
 input {
     font-family: inherit;
     letter-spacing: inherit;
-    max-width: 55%;
+    max-width: 60%;
     border: none;
     margin: 1em;
     padding: 0.5em 2em;
@@ -61,18 +84,23 @@ input {
 
 button {
     display: block;
-    background: white;
+    color: black;
+    background-color: white;
+    transition: 350ms;
 }
 
 h1 {
-    margin: 0 .75em;
+    margin: .75em;
+    line-height: 1em;
 }
 
 label {
     font-size: 1.2em;
 }
 
-
+span {
+    color: var(--purple);
+}
 
 
 /* Input and button animations */
@@ -89,8 +117,8 @@ input:focus {
 button:hover,
 button:focus {
     animation: rotate 0.7s ease-in-out both;
-
-    background-color: #4C4084;
+    background-color: var(--purple);
+    color: white;
 }
 
 @keyframes rotate {
