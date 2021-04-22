@@ -41,6 +41,7 @@ function showResult() {
 document.getElementById("backBtn").addEventListener("click", function() {
     formContainer.style.display = "flex"
     resultContainer.style.display = "none"
+    document.querySelector(".error-message").style.display = "none"
 })
 
 function dayCounter() {
