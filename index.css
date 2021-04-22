@@ -111,6 +111,7 @@ input {
 
 input:hover,
 input:focus {
+    outline: none;
     transform: scale(1.1);
 }
 

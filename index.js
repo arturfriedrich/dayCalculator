@@ -1,5 +1,6 @@
 var formContainer = document.querySelector(".form-container")
 var resultContainer = document.querySelector(".result-container")
+var resultDisplay = document.querySelector(".result")
 
 // get the input date
 function GetDays(){
@@ -20,11 +21,11 @@ let dateTime = cDate
 
 // calculate on click
 document.getElementById("submitBtn").addEventListener("click", function() {
-    console.log(GetDays())
     
     // hide the form-container
     if (GetDays()) {
         showResult()
+        dayCounter()
     } else {
         document.querySelector(".error-message").style.display = "block"
     }
@@ -34,14 +35,22 @@ function showResult() {
     formContainer.style.display = "none"
     resultContainer.style.display = "flex"
     
-    var resultDisplay = document.querySelector(".result")
     var resultScore = GetDays()
-    
-    resultDisplay.innerHTML = resultScore
-    
 }
 
 document.getElementById("backBtn").addEventListener("click", function() {
     formContainer.style.display = "flex"
     resultContainer.style.display = "none"
 })
+
+function dayCounter() {
+    var resultScore = GetDays()
+    let count = resultScore * 0.95
+    
+    setInterval(() => {
+        if (count < resultScore) {
+            count++
+            resultDisplay.innerHTML = Math.round(count)
+        }
+    })
+}
