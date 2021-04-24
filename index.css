@@ -39,19 +39,21 @@ body {
 
 
 .container {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  
-  background-color: var(--orange);
-  margin: 3em;
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px 5px #8888;
-  
-  transform: scale(1);
-  transition: 500ms;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: var(--orange);
+    margin: 3em;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px #8888;
+    height: 60%;
+    max-height: 600px;
+    
+    transform: scale(1);
+    transition: 500ms;
 }
 
 .container:hover {
