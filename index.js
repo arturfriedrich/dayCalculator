@@ -46,7 +46,7 @@ document.getElementById("backBtn").addEventListener("click", function() {
 
 function dayCounter() {
     var resultScore = GetDays()
-    let count = resultScore * 0.95
+    let count = resultScore * 0.90
     
     setInterval(() => {
         if (count < resultScore) {

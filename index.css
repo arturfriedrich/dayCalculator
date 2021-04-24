@@ -163,3 +163,33 @@ button:focus span {
         transform: translate3d(0, 0, 0) translateZ(0);
     }
 }
+
+/* result screen water animation */
+.result-container {
+    position:relative;
+    overflow:hidden;
+}
+
+.result-container::before {
+    content:"";
+    position:absolute;
+    width:1000px;
+    height:1000px;
+    background:#7CA6DE;
+    left:50%;
+    transform:translateX(-50%);
+    border-radius:40%;
+    animation:fill 4s ease-in-out;
+    z-index:-1;
+}
+
+@keyframes fill {
+    from {
+      top: 100%;
+      transform:translateX(-50%) rotate(0deg);
+    }
+    to {
+      top: 0%;
+      transform:translateX(-50%) rotate(360deg);
+    }
+  }
